@@ -219,5 +219,16 @@ public class ArrayListsTest {
         // Then
         Assert.assertFalse(actual);
     }
-
+	
+	@Test
+    public void happyListTest6(){
+        // Given
+        ArrayList<String> original = new ArrayList<String>();
+        original.add("We got this!");
+		original.add("We got this!");
+        // When
+        boolean actual = arrayLists.happyList(original);
+        // Then
+        Assert.assertTrue(actual);
+    }
 }

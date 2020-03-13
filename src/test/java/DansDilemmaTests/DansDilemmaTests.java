@@ -64,6 +64,18 @@ public class DansDilemmaTests {
         Integer expected = 1;
         Assert.assertEquals(expected, actual);
     }
+	
+	@Test
+    public void dilemmaOfTwoDoubleTest5(){
+        // Given
+        Double input1 = 1d;
+        Double input2 = 1d;
+        // When
+        Integer actual = dansDilemma.dilemmaOfTwo(input1, input2);
+        // Then
+        Integer expected = 3;
+        Assert.assertEquals(expected, actual);
+    }
 
     @Test
     public void dilemmaOfThreeDoubleTest1(){

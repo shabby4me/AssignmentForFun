@@ -15,13 +15,16 @@ public class BasicStrings {
 			System.out.println("Null ref should not be here!");
 			return '\0';
 		}
-			
+		if(string.length()<=index) {
+			System.out.println("Index out of boundary!");
+			return '\0';
+		}
         return string.charAt(index);
     }
 
     public String iCantSee(String string) {
 		if(string==null)
-			return "";
+			return null;
 		String blank= " ";
 		String ret = "";
 		for(int i=0;i<string.length();++i)

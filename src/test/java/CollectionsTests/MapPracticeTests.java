@@ -266,7 +266,31 @@ public class MapPracticeTests {
         // Then
         Assert.assertEquals(expected, actual);
     }
-
+	
+	@Test
+    public void crazySpiralTest6(){
+        // Given
+        Integer upTo = 12;
+        Integer first = 3;
+        Integer second = -3;
+        // When
+        Map<Integer, Integer> expected = new TreeMap<Integer, Integer>();
+        expected.put(1, 3);
+        expected.put(2, -3);
+        expected.put(3, 0);
+        expected.put(4, -3);
+        expected.put(5, -3);
+        expected.put(6, -6);
+        expected.put(7, -9);
+        expected.put(8, -15);
+        expected.put(9, -24);
+        expected.put(10, -39);
+        expected.put(11, -63);
+        expected.put(12, -102);
+        Map<Integer, Integer> actual = mapPractice.crazySpiral(first, second, upTo);
+        // Then
+        Assert.assertEquals(expected, actual);
+    }
 
 
 }
