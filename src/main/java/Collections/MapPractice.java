@@ -8,11 +8,15 @@ import java.util.ArrayList;
 public class MapPractice {
 
     public Object findValueOf(Map map, Object key) {
-		
+		if(map==null)
+			return null;
         return map.get(key);
     }
 
     public Object[] findKeysOf(Map map, Object value) {
+		if(map==null){
+			return new Object[0];
+		}
 		List<Object> l = new ArrayList<Object>();
 		for(Object key : map.keySet()){
 			if(map.get(key).equals(value))
@@ -45,6 +49,8 @@ public class MapPractice {
     }
 
     public Map<Integer, Integer> crazySpiral(Integer first, Integer second, Integer size) {
+		if(first==null || second==null|| size==null)
+			return null;
 		if(size<0)
 			return null;
 		Map<Integer, Integer> ret = new HashMap<Integer, Integer>();

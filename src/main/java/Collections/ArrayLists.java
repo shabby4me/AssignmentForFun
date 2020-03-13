@@ -5,6 +5,12 @@ import java.util.ArrayList;
 public class ArrayLists {
 
     public ArrayList<Integer> addShit(ArrayList<Integer> list1, ArrayList<Integer> list2) {
+		if(list2==null)
+			return list1;
+		
+		if(list1==null)
+			list1 = new ArrayList<Integer>();
+		
 		for(Integer i : list2){
 			list1.add(i);
 		}
@@ -13,10 +19,15 @@ public class ArrayLists {
 
     public Integer addShitTogether(ArrayList<Integer> list1, ArrayList<Integer> list2) {
 		Integer sum = 0;
-		for(Integer i : list1)
-			sum+=i;
-		for(Integer i : list2)
-			sum+=i;
+		if(list1!=null){
+			for(Integer i : list1)
+				sum+=i;
+		}
+		
+		if(list2!=null){
+			for(Integer i : list2)
+				sum+=i;
+		}
         return sum;
     }
 
@@ -43,6 +54,8 @@ public class ArrayLists {
     }
 	
 	private boolean isHappy(String str1, String str2){
+		if(str1 == null || str2 == null)
+			return false;
 		for(int i = 0;i<str1.length();++i){
 			if(str2.indexOf(str1.charAt(i))>=0){
 				return true;

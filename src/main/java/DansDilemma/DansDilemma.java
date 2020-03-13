@@ -38,7 +38,12 @@ public class DansDilemma {
     }
 	
 	private void add(Set<Double> results, Set<Double> inputs, Double newNum){
+		if(newNum==null)
+			return;
 		for(Double d : inputs){
+			if(d == null){
+				continue;
+			}
 			results.add(d+newNum);
 			results.add(d-newNum);
 			if(d!=newNum)
